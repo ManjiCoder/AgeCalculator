@@ -1,89 +1,69 @@
-console.log("work");
-
-
 let DOB = document.getElementById("dob");
 let Today = document.getElementById("today");
 let btn = document.getElementById("btn");
 let h2 = document.querySelector('h4');
 
 function age() {
-    console.log("button is working");
 
     // Variables Declaration
     let a = DOB.value;
     let b = Today.value;
     let c = new Date(a);
     let d = new Date(b);
-    let date1 = c.getFullYear();
-    let date2 = d.getFullYear();
-    let date11 = c.getMonth();
-    let date22 = d.getMonth();
+    let year1 = c.getFullYear();
+    let year2 = d.getFullYear();
+    let month1 = c.getMonth();
+    let month2 = d.getMonth();
+    let date1 = c.getDate();
+    let date2 = d.getDate();
 
+    // let fullArr = [c.getDate(), d.getDate(), c.getMonth(), d.getMonth(), c.getFullYear(), d.getFullYear()]
+    // console.log(fullArr);
+    // DO NOT DELETE//
+    //  let dateArr = [c.getFullYear(), d.getFullYear(), c.getMonth(), d.getMonth(), c.getDay(), d.getDay()]; // getDay give return value in Integer from 0-6 0:Sunday, 1:Monday & so on;
+    // console.log(dateArr);
     // Conditions
-    if (date2 > date1) {
-        // console.log(date2 + " is big");
+    if (a != b) {
+        let diff = d - c;
+        console.log(diff);
 
-        const diffYears = date2 - date1;
-        const diffMonths = date22 + date11;
+        if (b > a && (date1 == date2) && (month1 == month2)) {
+            let diffYears = year2 - year1;
+            // let minusOne = diffYears - 1;
+            let result = (h2.innerText = `You Are ${diffYears} Years`);
+            console.log("only year is different");
+            console.log(result);
+        }
+        
+        if (b > a && (date1 != date2) || (month1 != month2)) {
+            let diffYear = year2 - year1;
+            let minusOne = diffYear - 1;
+            let result1 = (h2.innerText = `You Are ${minusOne} Years`);
+            console.log("date is different");
+            console.log(result1);
+        }
+    }
 
-        console.log(h2.innerText = diffYears + " is your running year");
-        // console.log(a);
-        // console.log(b);
-        // console.log(c);
-        // console.log(d);
-        console.log(date1);
-        console.log(date2);
-        // console.log(date11);
-        // console.log(date22);
-        console.log(diffYears + ' in year');
-        console.log(diffMonths + ' in months');
+    else if (a == b) {
+        alert("Both Dates Are Same")
     }
-    else if (date1 > date2 ) {
-        alert("Enter a valid DOB")
-        // console.log(date1 + " is big");
-    }
-    else if(date2 == date1){
-        alert("both dates are common")
-    }
+
     else {
-        console.log("Incorrect");
+        alert("Incorrect");
     }
 }
-
-// let a = Math.abs(DOB - Today);
-// let diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
-// let a = eval(DOB) - eval(Today);
-// let a = (DOB) - (Today);
-// console.log(DOB.getDate());
-    // console.log(DOB.value);
-    // console.log(Today.value);
-    // console.log(a + "days");
-    // console.log(diffDays + "months");
-
-    // let a = DOB.value;
-    // let b = Today.value;
-    // let c = new Date(a);
-    // let d = new Date(b);
-    // let date1 = c.getFullYear();
-    // let date2 = d.getFullYear();
-    // let date11 = c.getMonth();
-    // let date22 = d.getMonth();
-    // const diffYears = date2 - date1;
-    // const diffMonths = date22 + date11;
-
-    // console.log(h2.innerText = diffYears + " is your running year");
-    // let dynamicElement = h2.innerText = 23;
-    // console.log(dynamicElement);
-
-    // console.log(a);
-    // console.log(b);
-    // console.log(c);
-    // console.log(d);
-    // console.log(date1);
-    // console.log(date2);
-    // console.log(date11);
-    // console.log(date22);
-    // console.log(diffYears + ' in year');
-    // console.log(diffMonths + ' in months');
-    // document.write(diffYears + ' is your running year');
+     // if (a > b) {
+            //     alert("Enter A Valid Date")
+            // }
+ // console.log(result);
+            // let result = (h2.innerText = diffYear);
+            // console.log(h2.innerText = diffYears + " is your running year");
+            // console.log(a);
+            // console.log(b);
+            // console.log(c);
+            // console.log(d);
+            // console.log(year1);
+            // console.log(year2);
+            // console.log(month1);
+            // console.log(month2);
 

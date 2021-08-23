@@ -21,8 +21,9 @@ form input{
     margin: 11px auto;
     padding: 9px 11px;
 }
-h4{
+h2, h4{
     font-size: 2rem;
     color: white;
     text-align: center;
+    padding: 2rem;
 }
