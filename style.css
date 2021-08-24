@@ -1,29 +1,80 @@
+/* Importing Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap');
 /* CSS RESET */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background: #34568b;
+body {
+  background: #34568b;
+  background: #55595c;
+  background: #4b5053;
+  /* background: #3aafaa; */
 }
-form{
-    /* width: 80%; */
+
+.container {
+  width: 100%;
+  height: 100vh;
+}
+
+form {
+  margin: 2rem auto;
+}
+
+form input {
+  border-radius: 4px;
+  background: white;
+  display: block;
+  margin: 11px;
+  padding: 9px 11px;
+}
+
+.heading {
+  font-family: 'Oxygen', sans-serif;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+#h1 {
+  padding: 2rem 0;
+  font-family: 'Rampart One', cursive;
+}
+
+.inputWrap {
+  display: flex;
+  color: black;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.inputWrap label {
+  width: 108px;
+}
+
+#btn {
+  display: block;
+  margin: 11px auto;
+  padding: 8px 58px;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 1rem;
+  /* font-family: 'Rampart One', cursive; */
+  font-family: 'Oxygen', sans-serif;
+}
+
+@media screen and (max-width:330px) {
+  .inputWrap {
+    flex-direction: column;
+  }
+  #btn {
     margin: 2rem auto;
-}
-form input{
-    border-radius: 4px;
-    /* width: 15%; */
-    background: white;
-    display: block;
-    margin: 11px auto;
-    padding: 9px 11px;
-}
-h2, h4{
-    font-size: 2rem;
-    color: white;
-    text-align: center;
-    padding: 2rem;
+  }
 }

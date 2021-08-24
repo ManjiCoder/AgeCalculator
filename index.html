@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,16 +8,25 @@
     <title>Age Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
-        <h2>Age Calculator</h2>
+        <h1 id="h1" class="heading">Age Calculator</h1>
         <form action="index.html">
-            <input type="date" name="dob" id="dob">
-            <input type="date" name="today" id="today">
-            <input type="button" value="Submit" id="btn" onclick="age()">
-            <h4></h4>
+            <div class="inputWrap"><label for="dob" class="heading">Date Of Birth :</label><input type="date" name="dob"
+                    id="dob"></div>
+            <div class="inputWrap"><label for="today" class="heading">Pick A Date :</label><input type="date"
+                    name="today" id="desiredDate"></div>
+            <input type="button" value="Submit" id="btn" onclick="calculateAge()">
+            <h2 class="heading"></h2>
+            <h3 class="heading"></h3>
+            <h4 class="heading"></h4>
+            <div id="weeks" class="heading"></div>
+            <div id="hrs" class="heading"></div>
+            <div id="mins" class="heading"></div>
         </form>
     </div>
 </body>
 <script src="script.js"></script>
+
 </html>
