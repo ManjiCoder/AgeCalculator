@@ -1,29 +1,30 @@
 /* CSS RESET */
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-body{
-    background: #34568b;
+body {
+  background: #34568b;
 }
-form{
-    /* width: 80%; */
-    margin: 2rem auto;
+form {
+  /* width: 80%; */
+  margin: 2rem auto;
 }
-form input{
-    border-radius: 4px;
-    /* width: 15%; */
-    background: white;
-    display: block;
-    margin: 11px auto;
-    padding: 9px 11px;
+form input {
+  border-radius: 4px;
+  /* width: 15%; */
+  background: white;
+  display: block;
+  margin: 11px auto;
+  padding: 9px 11px;
 }
-h2, h4{
-    font-size: 2rem;
-    color: white;
-    text-align: center;
-    padding: 2rem;
+.heading {
+  /*font-size: 2rem;*/
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+h1 {
+  padding: 2rem;
 }
