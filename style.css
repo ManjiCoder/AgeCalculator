@@ -61,7 +61,7 @@ form input {
 
 #btn {
   display: block;
-  margin: 11px auto;
+  margin: 11px auto !important;
   padding: 8px 58px;
   cursor: pointer;
   font-weight: 900;
@@ -80,7 +80,10 @@ form input {
 }
 
 body {
-  background: #34568b;
+  /* background: #34568b;
+  background: #55595c;
+  background: #3aafaa; */
+  background: #4b5053;
 }
 
 form {
