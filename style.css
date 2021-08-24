@@ -3,12 +3,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap');
 /* CSS RESET */
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+<<<<<<< HEAD
 
 body {
   /* background: #34568b;
@@ -78,3 +78,29 @@ form input {
     margin: 2rem auto;
   }
 }
+=======
+body {
+  background: #34568b;
+}
+form {
+  /* width: 80%; */
+  margin: 2rem auto;
+}
+form input {
+  border-radius: 4px;
+  /* width: 15%; */
+  background: white;
+  display: block;
+  margin: 11px auto;
+  padding: 9px 11px;
+}
+.heading {
+  /*font-size: 2rem;*/
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+h1 {
+  padding: 2rem;
+}
+>>>>>>> 7ab4cea5efcde7c3e394d5f44f4849e37779657e
