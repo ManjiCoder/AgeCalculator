@@ -39,3 +39,21 @@ function calculateAge() {
     alert("Invalid");
   }
 }
+
+// Navigation
+let hide = document.getElementById('icon');
+let nav = document.getElementById('navbar');
+function toggle_Width() {
+  // setTimeout(function () { nav.classList.toggle("Nav"); }, 100);
+  // console.log(nav);
+  nav.classList.toggle("Nav");
+  if (nav.style.display != "block") {
+    nav.style.display = "block";
+    // nav.style.transition - "all 2s";
+    console.log('block');
+  }
+  else {
+    nav.style.display = "none";
+    console.log('none');
+  }
+}
