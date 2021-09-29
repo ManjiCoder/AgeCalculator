@@ -52,6 +52,7 @@ form input {
 .heading {
   font-family: 'Oxygen', sans-serif;
   color: white;
+  text-shadow: 2px 1px black;
   text-align: center;
   padding: 1rem 0;
 }
@@ -117,4 +118,9 @@ li.nav--items {
   list-style: none;
   color: white;
   margin: 11px;
+}
+
+#error {
+  color: red;
+  text-shadow: 2px 1px black;
 }
