@@ -6,35 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Age Calculator</title>
+  <meta name="description" content="Check Your Age Here - It's Free">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <div class="container">
-    <h1 id="h1" class="heading">Age Calculator<img src="hamburger icon.png" alt="navigation" id="icon"
-        onclick="toggle_Width()"></h1>
-    <nav id="navbar">
-      <ul>
-        <li class="nav--items">items-1</li>
-        <li class="nav--items">items-2</li>
-        <li class="nav--items">items-3</li>
-        <li class="nav--items">items-4</li>
-        <li class="nav--items">items-5</li>
-        <li class="nav--items">items-6</li>
-      </ul>
-    </nav>
-
-
-    <form action="index.html">
-      <div class="inputWrap"><label for="dob" class="heading">Date Of Birth :</label><input type="date" name="dob"
-          id="dob"></div>
-      <div class="inputWrap"><label for="today" class="heading">Pick A Date :</label><input type="date" name="today"
-          id="desiredDate"></div>
+    <h1 id="h1" class="heading">Age Calculator</h1>
+    <form>
+      <div class="inputWrap"><label for="dob" class="heading">Date Of Birth :</label><input type="date" name="dob"id="dob"></div>
+      <div class="inputWrap"><label for="desiredDate" class="heading">Pick A Date :</label><input type="date"name="today" id="desiredDate"></div>
       <input type="button" value="Submit" id="btn" onclick="calculateAge()">
-      <h3 id="error" class="heading"></h3>
-      <h2 id="yrs" class="heading"></h2>
-      <h3 id="months" class="heading"></h3>
-      <h4 id="days" class="heading"></h4>
+      <h2 id="error" class="heading"></h2>
+      <h1 id="yrs" class="heading"></h1>
+      <h2 id="months" class="heading"></h2>
+      <h3 id="days" class="heading"></h3>
       <div id="weeks" class="heading"></div>
       <div id="hrs" class="heading"></div>
       <div id="mins" class="heading"></div>

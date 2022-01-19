@@ -1,9 +1,8 @@
 /* Importing Google Fonts */
-
 @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap');
-/* CSS RESET */
 
+/* CSS RESET */
 * {
   margin: 0;
   padding: 0;
@@ -11,12 +10,12 @@
 }
 
 body {
-  background: hsl(258 77% 63% / 1);
+  background: linear-gradient(180deg, #4d00ffd6, #f3beef);
 }
 
 .container {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 #h1 {
@@ -24,16 +23,25 @@ body {
   font-family: 'Rampart One', cursive;
 }
 
+.heading {
+  font-family: 'Oxygen', sans-serif;
+  color: white;
+  text-shadow: 2px 1px black;
+  text-align: center;
+  padding: 1rem 0;
+}
+
 form {
   margin: 2rem auto;
 }
 
 form input {
-  border-radius: 4px;
+  border-radius: 7px;
   background: white;
   display: block;
   margin: 11px 0px;
   padding: 9px 11px;
+  outline: none;
 }
 
 .inputWrap {
@@ -47,80 +55,41 @@ form input {
 
 .inputWrap label {
   width: 141px;
-}
-
-.heading {
-  font-family: 'Oxygen', sans-serif;
-  color: white;
-  text-shadow: 2px 1px black;
-  text-align: center;
-  padding: 1rem 0;
+  font-size: 1.2rem;
+  text-align: left;
 }
 
 #btn {
   display: block;
   margin: 11px auto;
+  border-radius: 7px;
   padding: 8px 58px;
   cursor: pointer;
+  outline: none;
   font-weight: 900;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-family: 'Oxygen', sans-serif;
-}
-
-/* Media Query is here */
-
-@media screen and (max-width:330px) {
-  .inputWrap {
-    flex-direction: column;
-  }
-  #btn {
-    margin: 2rem auto;
-  }
-}
-
-/* Navigation */
-
-#navbar {
-  display: none;
-  /* width: clamp(11vw, 140px, 145px); */
-  /* transform: translateX(-60px); */
-}
-
-.Nav {
-  top: 75px;
-  height: 100vh;
-  width: 90px;
-  background: hsl(258 77% 30% / 1);
-  position: absolute;
-}
-
-#icon {
-  margin: 0px 24px;
-  filter: invert(100%);
-  height: 40px;
-  width: 38px;
-  float: left;
-}
-
-#icon:hover {
-  filter: none;
-  cursor: pointer;
-  transition: all 0.4ms ease-out;
-}
-
-ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-li.nav--items {
-  list-style: none;
-  color: white;
-  margin: 11px;
 }
 
 #error {
   color: red;
-  text-shadow: 2px 1px black;
+  text-shadow: 1px 1px black;
+  text-transform: capitalize;
+}
+
+/* Focus-within & Hover */
+form input:focus-within, #btn:focus-within, form input:hover {
+  background: hsl(0, 0%, 83%);
+}
+
+/* Media Query is here */
+@media only screen and (orientation:portrait) and (max-width:330px) {
+  .inputWrap {
+    flex-direction: column;
+  }
+
+  #btn {
+    margin: 2rem auto;
+    font-size: small;
+  }
 }
