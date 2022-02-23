@@ -39,8 +39,11 @@ form input {
   border-radius: 7px;
   background: white;
   display: block;
-  margin: 11px 0px;
+  /* margin: 11px 0px; */
+  margin-top: 24px;
+  margin-bottom: 4px;
   padding: 9px 11px;
+  font-family: 'Oxygen', sans-serif;
   outline: none;
 }
 
@@ -59,9 +62,17 @@ form input {
   text-align: left;
 }
 
+.showRequired {
+  visibility: hidden;
+  font-family: 'Oxygen', sans-serif;
+  color: #af0202;
+  position: relative;
+  left: 28px;
+}
+
 #btn {
   display: block;
-  margin: 11px auto;
+  margin: 16px auto;
   border-radius: 7px;
   padding: 8px 58px;
   cursor: pointer;

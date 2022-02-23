@@ -15,8 +15,22 @@
   <div class="container">
     <h1 id="h1" class="heading">Age Calculator</h1>
     <form>
-      <div class="inputWrap"><label for="dob" class="heading">Date Of Birth :</label><input type="date" name="dob"id="dob"></div>
-      <div class="inputWrap"><label for="desiredDate" class="heading">Pick A Date :</label><input type="date"name="today" id="desiredDate"></div>
+      <div class="inputWrap">
+        <label for="dob" class="heading">Date Of Birth :</label>
+        <div>
+          <input class="input" type="date" name="dob" id="dob">
+          <span class="showRequired">* Required1</span>
+        </div>
+      </div>
+
+      <div class="inputWrap">
+        <label for="desiredDate" class="heading">Pick A Date :</label>
+        <div>
+        <input class="input" type="date" name="today" id="desiredDate">
+        <span class="showRequired">* Required</span>
+        </div>
+      </div>
+
       <input type="button" value="Submit" id="btn" onclick="calculateAge()">
       <h2 id="error" class="heading"></h2>
       <h1 id="yrs" class="heading"></h1>

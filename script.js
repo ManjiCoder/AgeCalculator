@@ -8,6 +8,8 @@ let days = document.getElementById('days');
 let weeks = document.getElementById('weeks');
 let hours = document.getElementById('hrs');
 let mins = document.getElementById('mins');
+let showRequired = document.getElementsByClassName('showRequired'); // To show these Field is required
+let inputs = document.getElementsByClassName('input')
 let err = document.getElementById('error'); // This is to show error made by user
 
 // Function => To Setting InnerHTML To Empty String When Error Occurs
@@ -28,23 +30,39 @@ function calculateAge() {
   const DOB = new Date(date1);      // Putting dob value into DOB
   const PickDate = new Date(date2); // Putting desiredDate value into PickDate
 
+  console.log("submitted");
+
   // If-Else Conditions
 
-  // For Invalid Date
-  if (date1 > date2) {
-    alert("Enter A Valid Date");
-    setInnerHTMLToEmptyWhenErrorOccurs();
-    err.innerHTML = "Enter A Valid Date";
-    console.error("Enter A Valid Date");
+  // For No Date Or Empty String
+  if ((date1 || date2) === "") {
+    console.log(showRequired.innerHTML);
+    for (let i = 0; i < showRequired.length; i++) {
+      showRequired[i].style.visibility = "visible";
+    }
+    for (let j = 0; j < inputs.length; j++) {
+      inputs[j].style.borderColor = 'red';
+    }
+
   }
 
-  // For Same Date
-  else if (date1 == date2) {
-    alert("Both Dates Are Same!");
-    setInnerHTMLToEmptyWhenErrorOccurs();
-    err.innerHTML = "Both Dates Are Same!";
-    console.error("Both Dates Are Same!");
+  else if ((date1 && date2) !== "") {
+    // For Invalid Date
+    if (date1 > date2) {
+      alert("Enter A Valid Date");
+      setInnerHTMLToEmptyWhenErrorOccurs();
+      err.innerHTML = "Enter A Valid Date";
+      console.error("Enter A Valid Date");
+    }
+    // For Same Date
+    else if ((date1 === date2) && ((date1 && date2) !== "")) {
+      alert("Both Dates Are Same!");
+      setInnerHTMLToEmptyWhenErrorOccurs();
+      err.innerHTML = "Both Dates Are Same!";
+      console.error("Both Dates Are Same!");
+    }
   }
+
 
   // To get result
   else if (DOB < PickDate) {
@@ -63,4 +81,12 @@ function calculateAge() {
   else {
     alert("Invalid");
   }
+}
+
+
+function checkInput() {
+  btn.addEventListener("click", () => {
+    console.log("submit");
+    document.showRequired.innerText = "Hello";
+  })
 }
