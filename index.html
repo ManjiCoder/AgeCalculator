@@ -18,14 +18,14 @@
       <div class="inputWrap">
         <label for="dob" class="heading">Date Of Birth :</label>
         <div>
-          <input class="input" type="date" name="dob" id="dob" required>
+          <input class="input" type="date" name="dob" id="dob" required oninvalid="this.setCustomValidity('Please Enter DOB')" >
         </div>
       </div>
 
       <div class="inputWrap">
         <label for="desiredDate" class="heading">Pick A Date :</label>
         <div>
-          <input class="input" type="date" name="today" id="desiredDate" required>
+          <input class="input" type="date" name="today" id="desiredDate" required oninvalid="this.setCustomValidity('Please Enter A Date')">
         </div>
       </div>
 

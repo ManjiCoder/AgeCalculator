@@ -36,7 +36,7 @@ function calculateAge() {
   if ((date1 && date2) !== "") {
 
     // For Same Date
-    if (date1 === date2) {
+    if ((date1 === date2) && ((date1 && date2)) !== '') {
       alert("Both Dates Are Same!");
       setInnerHTMLToEmptyWhenErrorOccurs();
       err.innerHTML = "Both Dates Are Same!";
