@@ -39,12 +39,15 @@ form input {
   border-radius: 7px;
   background: white;
   display: block;
-  /* margin: 11px 0px; */
-  margin-top: 24px;
-  margin-bottom: 4px;
+  margin: 11px 0px;
   padding: 9px 11px;
   font-family: 'Oxygen', sans-serif;
   outline: none;
+  border: 2px solid black;
+}
+
+.input {
+  border: 1.5px solid black;
 }
 
 .inputWrap {
@@ -62,13 +65,6 @@ form input {
   text-align: left;
 }
 
-.showRequired {
-  visibility: hidden;
-  font-family: 'Oxygen', sans-serif;
-  color: #af0202;
-  position: relative;
-  left: 28px;
-}
 
 #btn {
   display: block;
@@ -83,7 +79,7 @@ form input {
 }
 
 #error {
-  color: red;
+  color: yellow;
   text-shadow: 1px 1px black;
   text-transform: capitalize;
 }
