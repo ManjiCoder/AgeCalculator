@@ -1,6 +1,6 @@
 // Initializing Variables 
-let a = document.getElementById('dob');         //  To get Input Date of dob
-let b = document.getElementById('desiredDate'); //  To get Input Date of desiredDate
+const a = document.getElementById('dob');         //  To get Input Date of dob
+const b = document.getElementById('desiredDate'); //  To get Input Date of desiredDate
 let btn = document.getElementById('btn');
 let yrs = document.getElementById('yrs');
 let months = document.getElementById('months');
@@ -10,39 +10,40 @@ let hours = document.getElementById('hrs');
 let mins = document.getElementById('mins');
 let err = document.getElementById('error'); // This is to show error made by user
 
-// Function
+// Function => To Setting InnerHTML To Empty String When Error Occurs
+function setInnerHTMLToEmptyWhenErrorOccurs() {
+  err.style.display = "block";
+  yrs.innerHTML = "";
+  months.innerHTML = "";
+  days.innerHTML = "";
+  weeks.innerHTML = "";
+  hours.innerHTML = "";
+  mins.innerHTML = "";
+}
+
+// Function => calculateAge
 function calculateAge() {
-  let date1 = a.value;            // value of dob
-  let date2 = b.value;            // value desiredDate
-  let DOB = new Date(date1);      // Putting dob value into DOB
-  let PickDate = new Date(date2); // Putting desiredDate value into PickDate
+  const date1 = a.value;            // value of dob
+  const date2 = b.value;            // value desiredDate
+  const DOB = new Date(date1);      // Putting dob value into DOB
+  const PickDate = new Date(date2); // Putting desiredDate value into PickDate
 
   // If-Else Conditions
 
   // For Invalid Date
   if (date1 > date2) {
     alert("Enter A Valid Date");
-    err.style.display = "block";
+    setInnerHTMLToEmptyWhenErrorOccurs();
     err.innerHTML = "Enter A Valid Date";
-    yrs.innerHTML = "";
-    months.innerHTML = "";
-    days.innerHTML = "";
-    weeks.innerHTML = "";
-    hours.innerHTML = "";
-    mins.innerHTML = "";
+    console.error("Enter A Valid Date");
   }
 
   // For Same Date
   else if (date1 == date2) {
     alert("Both Dates Are Same!");
-    err.style.display = "block";
+    setInnerHTMLToEmptyWhenErrorOccurs();
     err.innerHTML = "Both Dates Are Same!";
-    yrs.innerHTML = "";
-    months.innerHTML = "";
-    days.innerHTML = "";
-    weeks.innerHTML = "";
-    hours.innerHTML = "";
-    mins.innerHTML = "";
+    console.error("Both Dates Are Same!");
   }
 
   // To get result
