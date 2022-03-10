@@ -18,18 +18,18 @@
       <div class="inputWrap">
         <label for="dob" class="heading">Date Of Birth :</label>
         <div>
-          <input class="input" type="date" name="dob" id="dob" required oninvalid="this.setCustomValidity('Please Enter DOB')" >
+          <input class="input" type="date" name="dob" id="dob" onchange="handleOnChange()">
         </div>
       </div>
 
       <div class="inputWrap">
         <label for="desiredDate" class="heading">Pick A Date :</label>
         <div>
-          <input class="input" type="date" name="today" id="desiredDate" required oninvalid="this.setCustomValidity('Please Enter A Date')">
+          <input class="input" type="date" name="today" id="desiredDate" onchange="handleOnChange()">
         </div>
       </div>
 
-      <input type="submit" id="btn" onclick="calculateAge()">
+      <input type="submit" id="btn" onclick="calculateAge()" disabled="true">
       <h2 id="error" class="heading"></h2>
       <h1 id="yrs" class="heading"></h1>
       <h2 id="months" class="heading"></h2>
