@@ -29,6 +29,7 @@ body {
   text-shadow: 2px 1px black;
   text-align: center;
   padding: 1rem 0;
+
 }
 
 form {
@@ -46,7 +47,8 @@ form input {
   border: 2px solid black;
 }
 
-.input {
+.inputDates {
+  width: 150px;
   border: 1.5px solid black;
 }
 
@@ -78,6 +80,23 @@ form input {
   background: #d6d6d6;
 }
 
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+}
+
+#check {
+  height: 20px;
+  width: 20px;
+}
+
+.checkboxText {
+  padding: 0 0.5rem !important;
+}
+
 #error {
   color: yellow;
   text-shadow: 1px 1px black;
@@ -85,8 +104,11 @@ form input {
 }
 
 /* Focus-within & Hover */
-form input:focus-within, #btn:focus-within, form input:hover {
-  background: hsl(0, 0%, 83%);
+.inputDates:focus-within,
+.inputDates:hover {
+  background: #d1cdcd;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
 }
 
 /* Media Query is here */
@@ -98,5 +120,9 @@ form input:focus-within, #btn:focus-within, form input:hover {
   #btn {
     margin: 2rem auto;
     font-size: small;
+  }
+
+  .heading {
+    padding: 0.5rem 0;
   }
 }

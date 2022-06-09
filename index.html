@@ -18,18 +18,23 @@
       <div class="inputWrap">
         <label for="dob" class="heading">Date Of Birth :</label>
         <div>
-          <input class="input" type="date" name="dob" id="dob" onchange="handleOnChange()">
+          <input class="inputDates" type="date" name="dob" id="dob" onchange="handleOnChange()">
         </div>
       </div>
 
       <div class="inputWrap">
         <label for="desiredDate" class="heading">Pick A Date :</label>
         <div>
-          <input class="input" type="date" name="today" id="desiredDate" onchange="handleOnChange()">
+          <input class="inputDates" type="date" name="today" id="desiredDate" onchange="handleOnChange()">
         </div>
       </div>
+      <div class="wrap">
+        <input type="checkbox" name="check" id="check" onclick="checkbox()">
+        <span class="heading checkboxText" id="checkboxText"></span>
+      </div>
+      <input type="submit" id="btn" onclick="calculateAge()" onmouseover="addHoverEffect()"
+        onmouseout="removeHoverEffect()" disabled="true">
 
-      <input type="submit" id="btn" onclick="calculateAge()" disabled="true">
       <h2 id="error" class="heading"></h2>
       <h1 id="yrs" class="heading"></h1>
       <h2 id="months" class="heading"></h2>
