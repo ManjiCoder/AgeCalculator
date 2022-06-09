@@ -64,6 +64,7 @@ function checkbox() {
 // Initializing Variables 
 
 // console.log(checkbox());
+checkbox()
 let btn = document.getElementById('btn');
 let yrs = document.getElementById('yrs');
 let months = document.getElementById('months');
